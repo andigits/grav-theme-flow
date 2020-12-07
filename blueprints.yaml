@@ -1,0 +1,18 @@
+name: Flow
+slug: flow
+type: theme
+version: 0.1.0
+description: Flow Theme for Grav
+icon: rebel
+author:
+  name: Andi Gits
+  email: andigits@uber.space
+homepage: https://github.com/andi-gits/grav-theme-flow
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/andi-gits/grav-theme-flow/issues
+readme: https://github.com/andi-gits/grav-theme-flow/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
