@@ -140,23 +140,6 @@ form:
       help: Add any footer content here
       size: large
 
-    multi_section:
-      type: section
-      title: Multi Section
-      underline: true
-
-    multi.nav:
-      type: toggle
-      label: Vertical Navigation Sidebar
-      help: When enabled, the Vertical Navigation Sidebar is available
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-
     blog_section:
       type: section
       title: Blog Defaults
