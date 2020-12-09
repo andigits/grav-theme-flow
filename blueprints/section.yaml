@@ -17,7 +17,7 @@ form:
 
             pagetitle:
                 type: section
-                title: Page Title 
+                title: Page Title (Sections)
                 underline: true
 
             header.hide_page_title:
