@@ -17,7 +17,9 @@ form:
               options:
                 small: Small   = 4 / 3 / 2 columns
                 standard: Standard  = 3 / 2 / 1 columns
-
+                offset-box small: Offset Box small
+                offset-box standard: Offset Box standard 
+                
             header.features:
               name: features
               type: list
