@@ -16,12 +16,8 @@
 
   {% set activetag = uri.param('filter') %}
   <div class="columns">
-
-    {% if sidebar %}
-      <div id="sections-content" class="column col-9 col-md-12">
-    {% else %}
-      <div id="sections-content" class="column col-12 col-md-12">
-    {% endif %}
+  
+    {% include 'partials/sections_columns_layout.html.twig' %}
     
       {% if not(page.header.hide_page_title) and not(grav.uri.param('hidepagetitle')) %}
         <h3 class="sections-page-title-template">{{ page.title }}</h3>
