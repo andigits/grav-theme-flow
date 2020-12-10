@@ -1,53 +1,52 @@
+<div id="sections-nav" class="column col-3 col-md-12">
 
-      <div id="sections-nav" class="column col-3 col-md-12">
+  <ul class="nav">
 
-        <ul class="nav">
+    {% set collection = page.collection.visible() %}
 
-          {% set collection = page.collection.visible() %}
+    {% if collection is empty %}
+      {% set collection = page.parent.collection.visible() %}
+      {% if collection is empty %}
+        {% set collection = page.parent.parent.collection.visible() %}
+      {% endif %}
+    {% endif %}
 
-          {% if collection is empty %}
-            {% set collection = page.parent.collection.visible() %}
-            {% if collection is empty %}
-              {% set collection = page.parent.parent.collection.visible() %}
-            {% endif %}
-          {% endif %}
+    {% for p in collection %}
 
-          {% for p in collection %}
+      {% set current_parent = p.active
+        ? 'active'
+        : '' %}
+      <li class="nav-item  {{ current_parent }}">
+        <a href="{% if activetag %}{{ p.url ~ '/filter:' ~ activetag }}{% else %}{{ p.url }}{% endif %}">{{ p.menu }}</a>
+      </li>
 
-            {% set current_parent = p.active
-              ? 'active'
-              : '' %}
-            <li class="nav-item  {{ current_parent }}">
-              <a href="{% if activetag %}{{ p.url ~ '/filter:' ~ activetag }}{% else %}{{ p.url }}{% endif %}">{{ p.menu }}</a>
-            </li>
+      {% if p.children.visible.count != 0 %}
 
-            {% if p.children.visible.count != 0 %}
-
-              {% if p.active or(p.slug == page.parent.slug) %}
-                <ul class="nav">
-                  {% for child in p.children.visible %}
-                    {% set current_child = child.active
-                      ? 'active'
-                      : '' %}
-                    {% if activetag %}
-                      {% if activetag in child.taxonomy['filter'] %}
-                        <li class="nav-item {{ current_child }}">
-                          <a href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
-                        </li>
-                      {% endif %}
-                    {% else %}
-                      <li class="nav-item {{ current_child }}">
-                        <a href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
-                      </li>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
+        {% if p.active or(p.slug == page.parent.slug) %}
+          <ul class="nav">
+            {% for child in p.children.visible %}
+              {% set current_child = child.active
+                ? 'active'
+                : '' %}
+              {% if activetag %}
+                {% if activetag in child.taxonomy['filter'] %}
+                  <li class="nav-item {{ current_child }}">
+                    <a href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
+                  </li>
+                {% endif %}
+              {% else %}
+                <li class="nav-item {{ current_child }}">
+                  <a href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
+                </li>
               {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
 
-            {% endif %}
+      {% endif %}
 
-          {% endfor %}
+    {% endfor %}
 
-      </ul>
+  </ul>
 
-    </div>
+</div>
