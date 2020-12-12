@@ -1,7 +1,7 @@
 // flow custom.scss
 
 // for debuging
-body { background-color: darkgrey }
+//body { background-color: darkgrey }
 
 #sections-presentation {
   display: flex;
@@ -18,9 +18,8 @@ body { background-color: darkgrey }
   //background: red;
 }
 
-// optional settings for slider section
+// for debuging
 #slider {
-  // for debuging
   //background: green;
 }
 
@@ -30,11 +29,32 @@ body { background-color: darkgrey }
    } 
 }
 
+// Slider
+
 .lSAction > .lSPrev {
   filter: invert(75%);
 }
 .lSAction > .lSNext {
   filter: invert(75%);
 }
+
 .grav-lightslider h1, .grav-lightslider h2, .grav-lightslider h3, .grav-lightslider h4 { color: unset;}
 
+// Ensure dropdown and mobile navigation is accessable while sliding
+// theme/_header.scss
+.header-fixed #header { z-index: 200; }
+
+.mobile-container { z-index: 200; }
+.mobile-menu { z-index: 201; }
+
+
+// Hamburger Menu
+// from mobile.scss
+.mobile-menu {
+  .button_container {
+    right: $horiz-padding * 2;
+  }
+}  
+
+// Background image overlay
+#header { background: unset; }
