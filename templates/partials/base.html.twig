@@ -1,6 +1,7 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set bg_image = page.header.background_image %}
 {% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
@@ -38,10 +39,10 @@
 {% endblock %}
 </head>
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
-    <div id="page-wrapper">
+    <div id="page-wrapper" {% if bg_image %} class="{{ background_image_class(bg_image) }}"{% endif %}>
     {% block header %}
         <section id="header" class="section">
-            <section class="container {{ grid_size }}">
+            <section class="container {{ grid_size }}" {% if bg_image %}style="{{bg_image.overlay}} padding-left: 2%; padding-right: 2%;"{% endif %}>          
                 <nav class="navbar">
                     <section class="navbar-section logo">
                         {% include 'partials/logo.html.twig' %}
@@ -60,7 +61,7 @@
 
                     </section>
                 </nav>
-            </section>
+            </section>       
         </section>
         <div class="mobile-menu">
             <div class="button_container" id="toggle">
@@ -76,11 +77,11 @@
         <section id="start">
         {% block body %}
             <section id="body-wrapper" class="section">
-                <section class="container {{ grid_size }}">
+                <section class="container {{ grid_size }}" {% if bg_image %}style="{{bg_image.overlay}} padding-left: 2%; padding-right: 2%;"{% endif %}>          
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
-                    {{ block('content_surround') }}
+                    {{ block('content_surround') }}                  
                 </section>
             </section>
         {% endblock %}
