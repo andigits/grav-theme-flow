@@ -3,3 +3,22 @@
 {% else %}
   <div id="sections-content" class="column col-12 col-md-12">
 {% endif %}
+
+{% if presentation %}
+  <div id="sections-presentation">
+    
+    <div id="slider" class="column col-9 col-md-12">    
+      {% include 'modular/lightslider.html.twig' ignore missing with {'page': page.find(presentation, true)} %}
+    </div>
+    
+    {% if not sidebar %}
+      <div id="sections-info" class="column col-3 col-md-12">
+        {% include 'partials/sections_title_content.html.twig' %}        
+      </div>
+    {% endif %}
+    
+  </div>
+{% else %}
+
+  {% include 'partials/sections_title_content.html.twig' %}
+{% endif %}

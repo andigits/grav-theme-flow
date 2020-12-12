@@ -5,6 +5,10 @@
 {% elseif page.parent.header.sidebar_nav is defined %}
   {% set sidebar = page.parent.header.sidebar_nav %}
 {% endif %}
+
+{% if (page.header.sliderpage) %}
+  {% set presentation = "/sliders/"~page.header.sliderpage %}
+{% endif %}
   
 {% if page.parent.parent.header.hide_next_prev_page_buttons is defined %}
   {% set hide_next_prev_page_buttons = page.parent.parent.header.hide_next_prev_page_buttons %}
@@ -18,12 +22,6 @@
   <div class="columns">
   
     {% include 'partials/sections_columns_layout.html.twig' %}
-    
-      {% if not(page.header.hide_page_title) and not(grav.uri.param('hidepagetitle')) %}
-        <h3 class="sections-page-title-template">{{ page.title }}</h3>
-      {% endif %}
-
-      {{ page.content|raw }}
 
       {% if not(hide_next_prev_page_buttons) %}
         <p class="prev-next">

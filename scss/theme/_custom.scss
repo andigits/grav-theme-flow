@@ -1,1 +1,40 @@
 // flow custom.scss
+
+// for debuging
+body { background-color: darkgrey }
+
+#sections-presentation {
+  display: flex;
+}
+
+#sections-info {
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+  padding-top: 5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  // for debuging
+  //background: red;
+}
+
+// optional settings for slider section
+#slider {
+  // for debuging
+  //background: green;
+}
+
+@media (max-width: 840px) { 
+  #sections-presentation { display: block;
+                                          padding-top: 0vw;
+   } 
+}
+
+.lSAction > .lSPrev {
+  filter: invert(75%);
+}
+.lSAction > .lSNext {
+  filter: invert(75%);
+}
+.grav-lightslider h1, .grav-lightslider h2, .grav-lightslider h3, .grav-lightslider h4 { color: unset;}
+
