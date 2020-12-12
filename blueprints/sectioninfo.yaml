@@ -1,0 +1,39 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        options:
+          type: tab
+          title: PLUGIN_ADMIN.OPTIONS
+
+          fields:
+
+            publishing:
+              fields:
+                header.published:
+                  replace@: true
+                  type: toggle
+                  toggleable: false
+                  label: Publish
+                  help: This content is shown in Section Content Info
+                  highlight: 0
+                  default: 0
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                    required: true
+
+                header.date:
+                  unset@: true
+
+                header.publish_date:
+                  unset@: true
+
+                header.unpublish_date:
+                  unset@: true
+                  

@@ -10,6 +10,7 @@ form:
       active: 1
 
       fields:
+        
         options:
           type: tab
 
@@ -31,3 +32,4 @@ form:
                     1:  No
                 validate:
                     type: bool
+                     

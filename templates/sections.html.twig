@@ -6,8 +6,8 @@
   {% set sidebar = page.parent.header.sidebar_nav %}
 {% endif %}
 
-{% if (page.header.sliderpage) %}
-  {% set presentation = "/sliders/"~page.header.sliderpage %}
+{% if (page.header.lightslider) %}
+  {% set presentation = page.header.lightslider %}
 {% endif %}
   
 {% if page.parent.parent.header.hide_next_prev_page_buttons is defined %}

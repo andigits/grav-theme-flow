@@ -8,13 +8,11 @@
   <div id="sections-presentation">
     
     <div id="slider" class="column col-9 col-md-12">    
-      {% include 'modular/lightslider.html.twig' ignore missing with {'page': page.find(presentation, true)} %}
+      {% include 'partials/sections_active_lightslider.html.twig'%}
     </div>
     
     {% if not sidebar %}
-      <div id="sections-info" class="column col-3 col-md-12">
-        {% include 'partials/sections_title_content.html.twig' %}        
-      </div>
+        {% include 'sectioninfo.html.twig' %}        
     {% endif %}
     
   </div>
