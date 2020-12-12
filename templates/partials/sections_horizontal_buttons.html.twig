@@ -50,7 +50,7 @@
       </a>
     {% endif %}
   {% else %}
-    {% if page.children.count != 0 %}
+    {% if page.children.visible.count != 0 %}
       <a class="btn btn-primary" href="{% if activetag %}{{ page.children|first.url ~ '/filter:' ~ activetag }}{% else %}{{ page.children|first.url }}{% endif %}">{{ page.children|first.menu }}
         <i class="fa fa-chevron-right"></i>
       </a>
