@@ -1,0 +1,5 @@
+{% set info = page.children.first %}
+
+<div id="sections-info" class="column col-3 col-md-12">
+  {% include 'partials/sections_title_content.html.twig' ignore missing with {'page': info} %}
+</div>

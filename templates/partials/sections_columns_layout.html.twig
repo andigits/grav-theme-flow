@@ -1,0 +1,22 @@
+{% if sidebar %}
+  <div id="sections-content" class="column col-9 col-md-12">
+{% else %}
+  <div id="sections-content" class="column col-12 col-md-12">
+{% endif %}
+
+{% if presentation %}
+  <div id="sections-presentation">
+    
+    <div id="slider" class="column col-9 col-md-12">    
+      {% include 'partials/sections_active_lightslider.html.twig'%}
+    </div>
+    
+    {% if not sidebar %}
+        {% include 'sectioninfo.html.twig' %}        
+    {% endif %}
+    
+  </div>
+{% else %}
+
+  {% include 'partials/sections_title_content.html.twig' %}
+{% endif %}
