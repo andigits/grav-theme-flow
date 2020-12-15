@@ -15,9 +15,9 @@ form:
                 header.published:
                   replace@: true
                   type: toggle
-                  toggleable: false
+                  readonly: true/Users/andi/Sites/grav/grav-theme-quark-dimensions/user/themes/flow/templates/partials/sections_horizontal_buttons.html.twig
                   label: Publish
-                  help: This content is shown in Section Content Info
+                  help: This content is shown in the parent Section Content Info
                   highlight: 0
                   default: 0
                   size: medium
@@ -27,6 +27,8 @@ form:
                   validate:
                     type: bool
                     required: true
+                    pattern: 0
+                    message: Save for Sectioninfo requires Publish: No
 
                 header.date:
                   unset@: true

@@ -1,4 +1,6 @@
-{% if not(page.header.hide_page_title) and not(grav.uri.param('hidepagetitle')) %}
+{% if not(page.header.hide_page_title) and 
+        not(grav.uri.param('hidepagetitle')) and 
+        not( page.template == 'sectioninfo' )%}
   <h3 class="sections-page-title-template">{{ page.title }}</h3>
 {% endif %}
 {{ page.content|raw }}
