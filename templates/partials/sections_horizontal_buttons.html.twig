@@ -1,6 +1,6 @@
 {% if not siblings.isFirst(page.path) %}
   {% if children | length != 0 %}
-    {% if (siblings.nextSibling(page.path).children | last) %}
+    {% if (siblings.nextSibling(page.path).children.visible | last) %}
       <a class="btn btn-primary" href="{% if activetag %}{{ siblings.nextSibling(page.path).children|last.url ~ '/filter:' ~ activetag }}{% else %}{{ siblings.nextSibling(page.path).children|last.url }}{% endif %}">
         <i class="fa fa-chevron-left"></i>
         {{ siblings.nextSibling(page.path).children|last.menu }}
