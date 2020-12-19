@@ -38,8 +38,8 @@
     {{ assets.js()|raw }}
 {% endblock %}
 </head>
-<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
-    <div id="page-wrapper" {% if bg_image %} class="{{ background_image_class(bg_image) }}"{% endif %}>
+<body id="top" class="{% block body_classes %}{{ body_classes }}{%if bg_image%}{{ ' '~background_image_class(bg_image) }}{% endif %}{% endblock %}">
+    <div id="page-wrapper">
     {% block header %}
         <section id="header" class="section">
             <section class="container {{ grid_size }}" {% if bg_image %}style="{{bg_image.overlay}} padding-left: 2%; padding-right: 2%;"{% endif %}>          
