@@ -135,10 +135,10 @@ form:
         type: bool
 
     footer-content:
-      type: text
+      type: textarea
       label: Footer Content
       help: Add any footer content here
-      size: large
+      size: medium
 
     blog_section:
       type: section

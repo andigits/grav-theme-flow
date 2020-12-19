@@ -6,3 +6,4 @@ streams:
        '':
          - user/themes/flow
          - user/themes/quark
+footer-content: '<a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart-o pulse "></i> by <a href="https://trilby.media">Trilby Media</a> theming <a href="https://github.com/andigits/grav-theme-flow">Flow</a>.'
