@@ -1,0 +1,10 @@
+{% set footer_content = theme_var('footer-content') %}
+<section id="footer" class="section" {% if bg_image %}style="{{bg_image.overlay}}"{% endif %}>
+    <section class="container {{ grid_size }}">
+      {% if footer_content is empty %}
+        <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart-o pulse "></i> by <a href="https://trilby.media">Trilby Media</a>.</p>
+      {% else %}
+        <p>{{ footer_content|raw }}</p>
+      {% endif %}
+    </section>
+</section>
