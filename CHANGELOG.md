@@ -1,3 +1,9 @@
+# v0.4.0
+##  12/28/2020
+
+1. [](#improved)
+    * Modular pages background
+
 # v0.3.0
 ##  12/19/2020
 
