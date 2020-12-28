@@ -58,3 +58,20 @@
 
 // Background image overlay
 #header { background: unset; }
+
+// Offset box
+.modular-features.offset-box .frame-box  { background-color: unset}
+
+// Shadow Test
+// org.:
+//.modular-features.offset-box .frame-box { margin: -3rem -1.4rem 3rem; padding: 1rem 1rem; background: #1b2069; box-shadow: 0 0 75px 0 rgba(153, 153, 153, 0.1); }
+
+// remove all:
+//.modular-features.offset-box .frame-box  { margin: unset; padding: unset; background-color: unset; box-shadow: unset; }
+
+// container padding remove
+//.modular-features.offset-box .frame-box  { margin: unset; padding: unset; background-color: unset; box-shadow: 0px 0px 40px 20px rgba(37,23,55,0.75); }
+//.container {
+//    padding-right: unset;
+//    padding-left: unset;
+//}

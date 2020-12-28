@@ -1,8 +1,9 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set image = page.media.images|first %}
+{% set bg_image = page.parent.header.background_image %}
 
 <section class="section modular-text {{ page.header.class}}">
-    <section class="container {{ grid_size }}">
+    <section class="container {{ grid_size }}" {% if bg_image %}style="{{bg_image.overlay}} padding-left: 2%; padding-right: 2%; padding-top: 2%;"{% endif %}>
         <div class="columns {{ page.header.image_align|default('align-right') }}">
             {% if image %}
             <div class="column col-6 col-md-12">
