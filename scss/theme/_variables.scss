@@ -1,8 +1,22 @@
-// flow variables.scss
+// Flow variables.scss
 
-// Color overrides
+// Original Spectre -----------------------------
+//$dark-color: #303742 !default;
+//$light-color: #fff !default;
+//$gray-color: lighten($dark-color, 55%) !default;
+//$gray-color-dark: darken($gray-color, 30%) !default;
+//$gray-color-light: lighten($gray-color, 20%) !default;
 
-// --- Foreground -------------------------------
+
+// Original Quark -------------------------------
+//$primary-color: #3085EE !default;
+//$dark-color: #454d5d !default;
+//$light-color: #fff !default;
+//$gray-color: lighten($dark-color, 40%) !default;
+//$gray-color-dark: darken($gray-color, 25%) !default;
+
+
+// --- Background -------------------------------
 // Gray colors
 //$light-color: #ccc !default;
 // Black
@@ -11,8 +25,17 @@
 
 $light-color: #1b2069 !default;
 
-// --- Background -------------------------------
+// --- Foreground -------------------------------
 //$dark-color: #303742 !default;
 $dark-color: #999999 !default;
 
 //$dark-color: #bbbbbb !default;
+
+
+// --- Modular Text -----------------------------
+$gray-color: lighten($dark-color, 10%) !default;
+//test
+//$gray-color: red !default;
+
+$gray-color-light: darken($gray-color, 10%) !default;
+$gray-color-dark: lighten($gray-color, 10%) !default;

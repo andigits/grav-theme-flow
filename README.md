@@ -1,10 +1,12 @@
 # Flow Theme
 
+![Flow](screenshot.jpg)
+
 The **Flow** Theme is a quark-based presentation supporting theme for [Grav CMS](http://github.com/getgrav/grav).
 
 ## Description
 
-This the has is using Lightslider.js and Multisection pages.
+This theme is using Lightslider.js and Multisection pages.
 
 # Installation
 
