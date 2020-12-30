@@ -1,5 +1,9 @@
-{% set info = page.children.first %}
+{% set info_childs = page.children %}
 
-<div id="sections-info" class="column col-3 col-md-12">
-  {% include 'partials/sections_title_content.html.twig' ignore missing with {'page': info} %}
-</div>
+{% for info_child in info_childs %}
+  {% if (info_child.template == 'sectioninfo') %}
+    <div id="sections-info" class="column col-3 col-md-12">
+      {% include 'partials/sections_title_content.html.twig' ignore missing with {'page': info_child} %}
+    </div>
+  {% endif %}
+{% endfor %}

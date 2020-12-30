@@ -1,3 +1,9 @@
+# v0.5.0
+##  12/28/2020
+
+1. [](#improved)
+    * Sectioninfo template check
+    
 # v0.4.0
 ##  12/28/2020
 
